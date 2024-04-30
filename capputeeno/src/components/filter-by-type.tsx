@@ -25,7 +25,7 @@ const FilterItem = styled.li<FilterItemProps>`
 
   cursor: pointer;
 
-  color: var(--text-dark);
+  color: var(--text-dark-low);
 
   border-bottom: ${props => props.selected ? '4px solid var(--orange-low);' : ''};
 `

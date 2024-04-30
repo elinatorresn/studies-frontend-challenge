@@ -13,7 +13,7 @@ export const PrimaryInput = styled.input`
     line-height: 22px;
     
     background-color: var(--bg-search-input);
-    color: var(--text-dark);
+    color: var(--text-dark-low);
 `
 
 const InputContainer = styled.div`
@@ -28,12 +28,15 @@ const InputContainer = styled.div`
     }
 `
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    value: string,
+    handleChange: (value: string) => void
+}
 
 export function PrimaryInputWSearchIcon(props: InputProps){
     return (
         <InputContainer>
-            <PrimaryInput {...props}/>
+            <PrimaryInput onChange={(event) => props.handleChange(event.target.value)} {...props}/>
             <SearchIcon/>
         </InputContainer>
     )
