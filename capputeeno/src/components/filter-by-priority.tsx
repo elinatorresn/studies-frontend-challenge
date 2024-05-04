@@ -36,6 +36,7 @@ const DropdownPriorityFilter = styled.ul`
   background: white;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.10);
   top: 100%;
+  right: 8px;
 
   z-index: 999;
 

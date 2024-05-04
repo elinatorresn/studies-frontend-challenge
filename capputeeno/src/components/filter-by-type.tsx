@@ -12,22 +12,28 @@ const FilterList = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 24px;
   list-style: none;
+
+  @media (min-width: ${props => props.theme.desktopBreakpoint}) {
+    gap: 40px;
+  }
 `
 const FilterItem = styled.li<FilterItemProps>`
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: ${props => props.selected ? '600' : '400'};
-  line-height: 22px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
-
   cursor: pointer;
-
   color: var(--text-dark-low);
-
   border-bottom: ${props => props.selected ? '4px solid var(--orange-low);' : ''};
+
+  @media (min-width: ${props => props.theme.desktopBreakpoint}) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 `
 export function FilterByType(){
   const {type, setType} = useFilter();
